@@ -1,10 +1,10 @@
-package ebayTest.ebayApp;
+package com.ebay.Testcases;
 
 /**
  * Hello world!
  *
  */
-public class App 
+public class Login 
 {
     public static void main( String[] args )
     {
