@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="ebay App Suite" allow-return-values="true" verbose="1"
+	parallel="none">
+  		<test name="ebay App Validation on Android Emulator 7.0" preserve-order="true">
+		<parameter name="platformName" value="Android" />
+		<parameter name="platformVersion" value="7.0" />
+		<parameter name="deviceName" value="ZY3222CHPK" />
+		<parameter name="deviceOrientation" value="portrait" />
+		<parameter name="automationName" value="Appium" />
+		<parameter name="delay" value="1000" />
+		<parameter name="unicodeKeyboard" value="true" />
+		<parameter name="resetKeyboard" value="true" />
+ 		<classes>
+   		    <class name="com.eBay.Testcases.testclass"></class>  
+		</classes>	
+	</test>   	
+</suite> 

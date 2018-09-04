@@ -1,10 +1,13 @@
 package com.ebay.Repository;
 
-public class Page {
+import org.openqa.selenium.WebDriver;
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+public abstract class Page {
 
+	static protected WebDriver driver;
+
+	public Page(WebDriver driver) {
+		this.driver = driver;
 	}
 
 }
