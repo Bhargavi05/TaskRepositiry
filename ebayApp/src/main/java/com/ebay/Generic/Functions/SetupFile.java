@@ -12,7 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 //Class description: 
-//*****This class is for launching app using appium with all required capabilities for android *****\\
+//*****This class is for launching app using appium with all required capabilities *****\\
 
 public class SetupFile {
 	DesiredCapabilities caps;

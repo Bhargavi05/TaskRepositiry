@@ -17,6 +17,9 @@ import com.ebay.Repository.Locator_Interface;
 import com.ebay.Generic.Functions.GenericMethods;
 import com.ebay.Generic.Functions.SetupFile;
 
+//Class description: 
+//*****This class contains  all testcases related to Login feature *****\\
+
 public class Login implements Locator_Interface {
 
 	WebDriver driver;

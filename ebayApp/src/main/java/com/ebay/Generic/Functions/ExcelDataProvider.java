@@ -14,6 +14,10 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+//Class description: 
+//*****This class contains generic methods related to excel which will be used to read test data *****\\
+
+
 public class ExcelDataProvider {
 
 	private static XSSFCell Cell;

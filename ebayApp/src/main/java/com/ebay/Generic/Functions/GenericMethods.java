@@ -189,23 +189,22 @@ public class GenericMethods extends Page implements Locator_Interface {
 	 * Method Name: searchItem Script Developer: Bhargavi Creation Date: Sep 4th
 	 * Purpose: Method to search an item
 	 */
-	public static void searchItem(String InputText)
-			throws InterruptedException, Exception {
+	public static void searchItem(String InputText) throws InterruptedException, Exception {
 		WebElement findField = driver.findElement(By.xpath(searchBox));
 		try {
 			if (findField.isDisplayed()) {
-//				Click on search text box
+				// Click on search text box
 				findField.click();
 				Reporter.log("Clicked on searchBok", true);
 				driver.manage().timeouts().implicitlyWait(180, TimeUnit.SECONDS);
-//				CLear data
+				// CLear data
 				findField.clear();
 				Reporter.log("Cleared searchBok", true);
-//				Input text
+				// Input text
 				driver.findElement(By.xpath(searchTextbox)).sendKeys(InputText);
 				driver.manage().timeouts().implicitlyWait(180, TimeUnit.SECONDS);
 				Reporter.log(InputText + " was input into UI", true);
-//				select required item
+				// select required item
 				WebElement displayedElement = driver.findElement(By.xpath(searchedText));
 				displayedElement.click();
 				Reporter.log("Clicked on Mobile Phones", true);

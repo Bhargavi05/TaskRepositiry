@@ -18,6 +18,9 @@ import com.ebay.Repository.Locator_Interface;
 import com.ebay.Generic.Functions.GenericMethods;
 import com.ebay.Generic.Functions.SetupFile;
 
+//Class description: 
+//*****This class contains all testcases related to search feature *****\\
+
 public class Search implements Locator_Interface {
 
 	WebDriver driver;
@@ -58,8 +61,8 @@ public class Search implements Locator_Interface {
 		// To get tc name from excel
 		String TestcaseName = data.get("TestCase");
 
+		// To verify app launch
 		try {
-
 			boolean applaunchFlag = generic.verifyAppLaunch();
 			if (applaunchFlag) {
 				System.out.println("App Launched");
@@ -74,7 +77,8 @@ public class Search implements Locator_Interface {
 				System.out.println(TestcaseName);
 				driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
 				driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
-				GenericMethods.searchItem("Phone");
+				// Method to search particular item based on test data
+				GenericMethods.searchItem(data.get("InputValue"));
 				driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
 				if (GenericMethods.isObjectDisplayed(noResults)) {
 					Reporter.log(TestcaseName + "Passed", true);

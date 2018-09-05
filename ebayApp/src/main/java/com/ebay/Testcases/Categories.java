@@ -18,6 +18,9 @@ import com.ebay.Repository.Locator_Interface;
 import com.ebay.Generic.Functions.GenericMethods;
 import com.ebay.Generic.Functions.SetupFile;
 
+//Class description: 
+//*****This class contains all testcases related to categories feature *****\\
+
 public class Categories implements Locator_Interface {
 
 	WebDriver driver;
