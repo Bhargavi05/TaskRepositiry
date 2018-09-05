@@ -18,7 +18,7 @@ import com.ebay.Repository.Locator_Interface;
 import com.ebay.Generic.Functions.GenericMethods;
 import com.ebay.Generic.Functions.SetupFile;
 
-public class Categories implements Locator_Interface {
+public class Search implements Locator_Interface {
 
 	WebDriver driver;
 	String platform;
@@ -31,7 +31,7 @@ public class Categories implements Locator_Interface {
 	public Object[][] FormsData() throws Exception {
 
 		return com.ebay.Generic.Functions.ExcelDataProvider
-				.dataProvider(System.getProperty("user.dir") + "/TestData/ebayTestcases_Catg.xlsx", "Sheet1", "Y");
+				.dataProvider(System.getProperty("user.dir") + "/TestData/ebayTestcases_Search.xlsx", "Sheet1", "Y");
 
 	}
 
@@ -53,7 +53,7 @@ public class Categories implements Locator_Interface {
 	}
 
 	@Test(dataProvider = "FormsData")
-	public void verifyCategories(Hashtable<String, String> data) throws InterruptedException, Exception {
+	public void search(Hashtable<String, String> data) throws InterruptedException, Exception {
 
 		// To get tc name from excel
 		String TestcaseName = data.get("TestCase");
@@ -69,16 +69,17 @@ public class Categories implements Locator_Interface {
 			GenericMethods.failTestCase("App not launched");
 		}
 		try {
-			// Test case:Click on Categories and scroll down till end
-			if (data.get("VerificationKey").equalsIgnoreCase("Categories")) {
+			// Test case:To search an item
+			if (data.get("VerificationKey").equalsIgnoreCase(data.get("InputValue"))) {
 				System.out.println(TestcaseName);
 				driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
-				GenericMethods.clickOnButton(categories);
-				// To scroll down till end
-				GenericMethods.scrollToBottomOfScreen();
-				if (GenericMethods.isObjectDisplayed(last_Catg)) {
+				driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
+				GenericMethods.searchItem("Phone");
+				driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
+				if (GenericMethods.isObjectDisplayed(noResults)) {
 					Reporter.log(TestcaseName + "Passed", true);
 				}
+				Thread.sleep(1000);
 			}
 		} catch (Exception e) {
 			GenericMethods.failTestCase(TestcaseName + "failed");

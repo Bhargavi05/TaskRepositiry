@@ -75,7 +75,7 @@ public class Login implements Locator_Interface {
 				// To verify and click on menu icon
 				GenericMethods.isObjectDisplayed(menu);
 				GenericMethods.clickOnButton(menu);
-				GenericMethods.SignIn(data.get("UserName"), data.get("Password"));
+				GenericMethods.signIn(data.get("UserName"), data.get("Password"));
 			}
 		} catch (Exception e) {
 			GenericMethods.failTestCase(TestcaseName + "failed");

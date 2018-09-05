@@ -18,6 +18,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.*;
 import org.testng.Reporter;
+
+import com.ebay.Generic.Functions.GenericMethods;
 import com.ebay.Repository.Locator_Interface;
 import com.ebay.Repository.Page;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -102,7 +104,7 @@ public class GenericMethods extends Page implements Locator_Interface {
 	 * Method Name: SignIn Script Developer: Bhargavi Creation Date: Sep 4th
 	 * Purpose: Method to click on any button on screen
 	 */
-	public static void SignIn(String userName, String pwd) throws IOException {
+	public static void signIn(String userName, String pwd) throws IOException {
 		String actualString = null;
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, 120);
@@ -173,7 +175,7 @@ public class GenericMethods extends Page implements Locator_Interface {
 	 * Method Name: ScrollToBottomOfScreen Script Developer: Bhargavi Creation
 	 * Date: Sep 4th Purpose: Method to scroll to the bottom of the screen
 	 */
-	public static void ScrollToBottomOfScreen() throws InterruptedException {
+	public static void scrollToBottomOfScreen() throws InterruptedException {
 		for (int i = 0; i < 10; i++) {
 			Thread.sleep(1000);
 			TouchAction action = new TouchAction((MobileDriver) driver);
@@ -181,5 +183,35 @@ public class GenericMethods extends Page implements Locator_Interface {
 			Thread.sleep(3000);
 		}
 
+	}
+
+	/*
+	 * Method Name: searchItem Script Developer: Bhargavi Creation Date: Sep 4th
+	 * Purpose: Method to search an item
+	 */
+	public static void searchItem(String InputText)
+			throws InterruptedException, Exception {
+		WebElement findField = driver.findElement(By.xpath(searchBox));
+		try {
+			if (findField.isDisplayed()) {
+//				Click on search text box
+				findField.click();
+				Reporter.log("Clicked on searchBok", true);
+				driver.manage().timeouts().implicitlyWait(180, TimeUnit.SECONDS);
+//				CLear data
+				findField.clear();
+				Reporter.log("Cleared searchBok", true);
+//				Input text
+				driver.findElement(By.xpath(searchTextbox)).sendKeys(InputText);
+				driver.manage().timeouts().implicitlyWait(180, TimeUnit.SECONDS);
+				Reporter.log(InputText + " was input into UI", true);
+//				select required item
+				WebElement displayedElement = driver.findElement(By.xpath(searchedText));
+				displayedElement.click();
+				Reporter.log("Clicked on Mobile Phones", true);
+			}
+		} catch (Exception ex) {
+			GenericMethods.failTestCase(InputText + " was not input into UI");
+		}
 	}
 }

@@ -13,6 +13,7 @@
  		<classes>
    		    <class name="com.ebay.Testcases.Login"></class>  
    		    <class name="com.ebay.Testcases.Categories"></class> 
+   		    <class name="com.ebay.Testcases.Search"></class> 
 		</classes>	
 	</test>   	
 </suite> 
