@@ -1,5 +1,6 @@
 package com.ebay.Testcases;
 
+import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
@@ -17,7 +18,7 @@ import com.ebay.Repository.Locator_Interface;
 import com.ebay.Generic.Functions.GenericMethods;
 import com.ebay.Generic.Functions.SetupFile;
 
-public class Login implements Locator_Interface {
+public class Categories implements Locator_Interface {
 
 	WebDriver driver;
 	String platform;
@@ -30,7 +31,7 @@ public class Login implements Locator_Interface {
 	public Object[][] FormsData() throws Exception {
 
 		return com.ebay.Generic.Functions.ExcelDataProvider.dataProvider(
-				System.getProperty("user.dir") + "/TestData/ebayTestcases_Login.xlsx", "Sheet1", "Y");
+				System.getProperty("user.dir") + "/TestData/ebayTestcases_Catg.xlsx", "Sheet1", "Y");
 
 	}
 
@@ -52,7 +53,7 @@ public class Login implements Locator_Interface {
 	}
 
 	@Test(dataProvider = "FormsData")
-	public void SignInVerification(Hashtable<String, String> data) throws InterruptedException, Exception {
+	public void verifyCategories(Hashtable<String, String> data) throws InterruptedException, Exception {
 
 		// To get tc name from excel
 		String TestcaseName = data.get("TestCase");
@@ -68,14 +69,16 @@ public class Login implements Locator_Interface {
 			GenericMethods.failTestCase("App not launched");
 		}
 		try {
-			// Test case1:To verify successfull Signin
-			if (data.get("VerificationKey").equalsIgnoreCase("SignIn")) {
+			// Test case:Click on Categories and scroll down till end
+			if (data.get("VerificationKey").equalsIgnoreCase("Categories")) {
 				System.out.println(TestcaseName);
 				driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
-				// To verify and click on menu icon
-				GenericMethods.isObjectDisplayed(menu);
-				GenericMethods.clickOnButton(menu);
-				GenericMethods.SignIn(data.get("UserName"), data.get("Password"));
+				GenericMethods.clickOnButton(categories);
+				// To scroll down till end
+				GenericMethods.ScrollToBottomOfScreen();
+				if (GenericMethods.isObjectDisplayed(last_Catg)) {
+					Reporter.log(TestcaseName + "Passed", true);
+				}
 			}
 		} catch (Exception e) {
 			GenericMethods.failTestCase(TestcaseName + "failed");

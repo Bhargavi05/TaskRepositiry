@@ -6,6 +6,7 @@ public interface Locator_Interface {
 	String menu="//*[@resource-id='com.ebay.mobile:id/home']";
 	String signIn_Menu="//*[contains(@content-desc,	'Sign in')]";
 	String categories="//*[@text='CATEGORIES']";
+	String searchBox="//*[@resource-id='com.ebay.mobile:id/search_box']";
 	
 	
 //	Sign-In page elements

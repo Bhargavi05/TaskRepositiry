@@ -175,7 +175,6 @@ public class GenericMethods extends Page implements Locator_Interface {
 	 */
 	public static void ScrollToBottomOfScreen() throws InterruptedException {
 		for (int i = 0; i < 10; i++) {
-			System.out.println("iteration=" + i);
 			Thread.sleep(1000);
 			TouchAction action = new TouchAction((MobileDriver) driver);
 			action.press(550, 1400).waitAction(3000).moveTo(550, 455).release().perform();

@@ -11,7 +11,8 @@
 		<parameter name="unicodeKeyboard" value="true" />
 		<parameter name="resetKeyboard" value="true" />
  		<classes>
-   		    <class name="com.eBay.Testcases.testclass"></class>  
+   		    <class name="com.ebay.Testcases.Login"></class>  
+   		    <class name="com.ebay.Testcases.Categories"></class> 
 		</classes>	
 	</test>   	
 </suite> 
