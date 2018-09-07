@@ -41,6 +41,9 @@
       <![CDATA[Signned In successfully]]>
     </line>
     <line>
+      <![CDATA[<br><img src='C:\Users\bhargavi\Documents\GitHub\TaskRepo\TaskRepositiry\ebayApp\ScreenShots7ea3e849-c150-40c3-9713-be9f34de0d29.png'height=500' width='500'/><br>]]>
+    </line>
+    <line>
       <![CDATA[ object is displayed]]>
     </line>
     <line>
@@ -53,15 +56,42 @@
       <![CDATA[Test case to verify CategoriesPassed]]>
     </line>
     <line>
+      <![CDATA[<br><img src='C:\Users\bhargavi\Documents\GitHub\TaskRepo\TaskRepositiry\ebayApp\ScreenShots3254b654-8a6a-43c9-9cad-9d047629a7ed.png'height=500' width='500'/><br>]]>
+    </line>
+    <line>
       <![CDATA[ object is displayed]]>
     </line>
+    <line>
+      <![CDATA[Clicked on searchBok]]>
+    </line>
+    <line>
+      <![CDATA[Cleared searchBok]]>
+    </line>
+    <line>
+      <![CDATA[Phone was input into UI]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on Mobile Phones]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\bhargavi\Documents\GitHub\TaskRepo\TaskRepositiry\ebayApp\ScreenShots74a64d82-2bbd-43a6-8f12-53eb5bae674c.png'height=500' width='500'/><br>]]>
+    </line>
+    <line>
+      <![CDATA[No results found for “phone” object is displayed]]>
+    </line>
+    <line>
+      <![CDATA[Test case to verify SearchPassed]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\bhargavi\Documents\GitHub\TaskRepo\TaskRepositiry\ebayApp\ScreenShots137c6bda-8045-4794-8e0e-628f46bdc664.png'height=500' width='500'/><br>]]>
+    </line>
   </reporter-output>
-  <suite name="ebay App Suite" duration-ms="231717" started-at="2018-09-05T08:04:04Z" finished-at="2018-09-05T08:07:55Z">
+  <suite name="ebay App Suite" duration-ms="292317" started-at="2018-09-07T11:37:16Z" finished-at="2018-09-07T11:42:08Z">
     <groups>
     </groups>
-    <test name="ebay App Validation on Android Emulator 7.0" duration-ms="231717" started-at="2018-09-05T08:04:04Z" finished-at="2018-09-05T08:07:55Z">
+    <test name="ebay App Validation on Android Emulator 7.0" duration-ms="292317" started-at="2018-09-07T11:37:16Z" finished-at="2018-09-07T11:42:08Z">
       <class name="com.ebay.Testcases.Search">
-        <test-method status="PASS" signature="Setup(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, int, java.lang.String, java.lang.String)[pri:0, instance:com.ebay.Testcases.Search@4cf777e8]" name="Setup" is-config="true" duration-ms="35215" started-at="2018-09-05T13:37:12Z" finished-at="2018-09-05T13:37:47Z">
+        <test-method status="PASS" signature="Setup(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, int, java.lang.String, java.lang.String)[pri:0, instance:com.ebay.Testcases.Search@4cf777e8]" name="Setup" is-config="true" duration-ms="52076" started-at="2018-09-07T17:10:31Z" finished-at="2018-09-07T17:11:23Z">
           <params>
             <param index="0">
               <value>
@@ -107,7 +137,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method status="PASS" signature="search(java.util.Hashtable)[pri:0, instance:com.ebay.Testcases.Search@4cf777e8]" name="search" duration-ms="1437" started-at="2018-09-05T13:37:47Z" data-provider="FormsData" finished-at="2018-09-05T13:37:48Z">
+        <test-method status="PASS" signature="search(java.util.Hashtable)[pri:0, instance:com.ebay.Testcases.Search@4cf777e8]" name="search" duration-ms="36077" started-at="2018-09-07T17:11:23Z" data-provider="FormsData" finished-at="2018-09-07T17:11:59Z">
           <params>
             <param index="0">
               <value>
@@ -119,15 +149,39 @@
             <line>
               <![CDATA[ object is displayed]]>
             </line>
+            <line>
+              <![CDATA[Clicked on searchBok]]>
+            </line>
+            <line>
+              <![CDATA[Cleared searchBok]]>
+            </line>
+            <line>
+              <![CDATA[Phone was input into UI]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on Mobile Phones]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\bhargavi\Documents\GitHub\TaskRepo\TaskRepositiry\ebayApp\ScreenShots74a64d82-2bbd-43a6-8f12-53eb5bae674c.png'height=500' width='500'/><br>]]>
+            </line>
+            <line>
+              <![CDATA[No results found for “phone” object is displayed]]>
+            </line>
+            <line>
+              <![CDATA[Test case to verify SearchPassed]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\bhargavi\Documents\GitHub\TaskRepo\TaskRepositiry\ebayApp\ScreenShots137c6bda-8045-4794-8e0e-628f46bdc664.png'height=500' width='500'/><br>]]>
+            </line>
           </reporter-output>
         </test-method> <!-- search -->
-        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.ebay.Testcases.Search@4cf777e8]" name="TearDown" is-config="true" duration-ms="6878" started-at="2018-09-05T13:37:48Z" finished-at="2018-09-05T13:37:55Z">
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.ebay.Testcases.Search@4cf777e8]" name="TearDown" is-config="true" duration-ms="8683" started-at="2018-09-07T17:11:59Z" finished-at="2018-09-07T17:12:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
       </class> <!-- com.ebay.Testcases.Search -->
       <class name="com.ebay.Testcases.Login">
-        <test-method status="PASS" signature="Setup(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, int, java.lang.String, java.lang.String)[pri:0, instance:com.ebay.Testcases.Login@27c20538]" name="Setup" is-config="true" duration-ms="39815" started-at="2018-09-05T13:34:04Z" finished-at="2018-09-05T13:34:44Z">
+        <test-method status="PASS" signature="Setup(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, int, java.lang.String, java.lang.String)[pri:0, instance:com.ebay.Testcases.Login@27c20538]" name="Setup" is-config="true" duration-ms="42880" started-at="2018-09-07T17:07:16Z" finished-at="2018-09-07T17:07:59Z">
           <params>
             <param index="0">
               <value>
@@ -173,7 +227,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method status="PASS" signature="SignInVerification(java.util.Hashtable)[pri:0, instance:com.ebay.Testcases.Login@27c20538]" name="SignInVerification" duration-ms="38705" started-at="2018-09-05T13:34:44Z" data-provider="FormsData" finished-at="2018-09-05T13:35:23Z">
+        <test-method status="PASS" signature="SignInVerification(java.util.Hashtable)[pri:0, instance:com.ebay.Testcases.Login@27c20538]" name="SignInVerification" duration-ms="38725" started-at="2018-09-07T17:07:59Z" data-provider="FormsData" finished-at="2018-09-07T17:08:38Z">
           <params>
             <param index="0">
               <value>
@@ -221,15 +275,18 @@
             <line>
               <![CDATA[Signned In successfully]]>
             </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\bhargavi\Documents\GitHub\TaskRepo\TaskRepositiry\ebayApp\ScreenShots7ea3e849-c150-40c3-9713-be9f34de0d29.png'height=500' width='500'/><br>]]>
+            </line>
           </reporter-output>
         </test-method> <!-- SignInVerification -->
-        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.ebay.Testcases.Login@27c20538]" name="TearDown" is-config="true" duration-ms="6942" started-at="2018-09-05T13:35:23Z" finished-at="2018-09-05T13:35:30Z">
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.ebay.Testcases.Login@27c20538]" name="TearDown" is-config="true" duration-ms="7087" started-at="2018-09-07T17:08:38Z" finished-at="2018-09-07T17:08:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
       </class> <!-- com.ebay.Testcases.Login -->
       <class name="com.ebay.Testcases.Categories">
-        <test-method status="PASS" signature="Setup(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, int, java.lang.String, java.lang.String)[pri:0, instance:com.ebay.Testcases.Categories@56ac3a89]" name="Setup" is-config="true" duration-ms="35316" started-at="2018-09-05T13:35:30Z" finished-at="2018-09-05T13:36:05Z">
+        <test-method status="PASS" signature="Setup(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, int, java.lang.String, java.lang.String)[pri:0, instance:com.ebay.Testcases.Categories@56ac3a89]" name="Setup" is-config="true" duration-ms="32092" started-at="2018-09-07T17:08:45Z" finished-at="2018-09-07T17:09:17Z">
           <params>
             <param index="0">
               <value>
@@ -275,7 +332,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method status="PASS" signature="verifyCategories(java.util.Hashtable)[pri:0, instance:com.ebay.Testcases.Categories@56ac3a89]" name="verifyCategories" duration-ms="59570" started-at="2018-09-05T13:36:05Z" data-provider="FormsData" finished-at="2018-09-05T13:37:05Z">
+        <test-method status="PASS" signature="verifyCategories(java.util.Hashtable)[pri:0, instance:com.ebay.Testcases.Categories@56ac3a89]" name="verifyCategories" duration-ms="66201" started-at="2018-09-07T17:09:17Z" data-provider="FormsData" finished-at="2018-09-07T17:10:23Z">
           <params>
             <param index="0">
               <value>
@@ -296,9 +353,12 @@
             <line>
               <![CDATA[Test case to verify CategoriesPassed]]>
             </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\bhargavi\Documents\GitHub\TaskRepo\TaskRepositiry\ebayApp\ScreenShots3254b654-8a6a-43c9-9cad-9d047629a7ed.png'height=500' width='500'/><br>]]>
+            </line>
           </reporter-output>
         </test-method> <!-- verifyCategories -->
-        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.ebay.Testcases.Categories@56ac3a89]" name="TearDown" is-config="true" duration-ms="7107" started-at="2018-09-05T13:37:05Z" finished-at="2018-09-05T13:37:12Z">
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.ebay.Testcases.Categories@56ac3a89]" name="TearDown" is-config="true" duration-ms="7645" started-at="2018-09-07T17:10:23Z" finished-at="2018-09-07T17:10:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->

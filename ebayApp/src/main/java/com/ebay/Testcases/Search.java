@@ -73,15 +73,15 @@ public class Search implements Locator_Interface {
 		}
 		try {
 			// Test case:To search an item
-			if (data.get("VerificationKey").equalsIgnoreCase(data.get("InputValue"))) {
+			if (data.get("VerificationKey").equalsIgnoreCase("Search")) {
 				System.out.println(TestcaseName);
-				driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
 				driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
 				// Method to search particular item based on test data
 				GenericMethods.searchItem(data.get("InputValue"));
 				driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
 				if (GenericMethods.isObjectDisplayed(noResults)) {
 					Reporter.log(TestcaseName + "Passed", true);
+					GenericMethods.toCaptureScreenShot();
 				}
 				Thread.sleep(1000);
 			}

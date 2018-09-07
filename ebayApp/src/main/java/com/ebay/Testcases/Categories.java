@@ -81,6 +81,8 @@ public class Categories implements Locator_Interface {
 				GenericMethods.scrollToBottomOfScreen();
 				if (GenericMethods.isObjectDisplayed(last_Catg)) {
 					Reporter.log(TestcaseName + "Passed", true);
+					GenericMethods.toCaptureScreenShot();
+					
 				}
 			}
 		} catch (Exception e) {

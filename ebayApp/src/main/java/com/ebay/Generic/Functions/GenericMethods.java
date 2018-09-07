@@ -4,15 +4,20 @@ import org.openqa.selenium.WebDriver;
 
 import static com.codeborne.selenide.Selenide.$;
 
+import java.io.File;
 import java.io.IOException;
 import java.text.Collator;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.ArrayUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -97,6 +102,7 @@ public class GenericMethods extends Page implements Locator_Interface {
 	public static void failTestCase(String failMessage) throws IOException {
 
 		Reporter.log(failMessage, true);
+		GenericMethods.toCaptureScreenShot();
 		Assert.fail(failMessage);
 	}
 
@@ -130,6 +136,7 @@ public class GenericMethods extends Page implements Locator_Interface {
 			driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
 			GenericMethods.isObjectDisplayed(logo);
 			Reporter.log("Signned In successfully", true);
+			GenericMethods.toCaptureScreenShot();
 		} catch (Exception ex) {
 			GenericMethods.failTestCase("Button " + actualString + " was not clicked ");
 		}
@@ -165,6 +172,7 @@ public class GenericMethods extends Page implements Locator_Interface {
 			driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
 			// To verify app logo
 			GenericMethods.isObjectDisplayed(logo);
+//			GenericMethods.toCaptureScreenShot();
 		} catch (Exception ex) {
 			GenericMethods.failTestCase("Tc fails as app not Launched");
 		}
@@ -208,9 +216,26 @@ public class GenericMethods extends Page implements Locator_Interface {
 				WebElement displayedElement = driver.findElement(By.xpath(searchedText));
 				displayedElement.click();
 				Reporter.log("Clicked on Mobile Phones", true);
+				GenericMethods.toCaptureScreenShot();
 			}
 		} catch (Exception ex) {
 			GenericMethods.failTestCase(InputText + " was not input into UI");
 		}
 	}
+	/*
+	 * Method Name: toCaptureScreenShot Script Developer: Bhargavi Creation
+	 * Date: Sep 6th Purpose: Method to capture required screenshot
+	 */
+
+	public static void toCaptureScreenShot() throws IOException {
+		    File srcFile=((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		    String filename=UUID.randomUUID().toString(); 
+		    File targetFile=new File(System.getProperty("user.dir")+"/ScreenShots"+filename +".png");
+		    FileUtils.copyFile(srcFile,targetFile);
+		    Reporter.log("<br><img src='"+targetFile+"'height=500' width='500'/><br>");
+		}
+		
+		
+		
+
 }
