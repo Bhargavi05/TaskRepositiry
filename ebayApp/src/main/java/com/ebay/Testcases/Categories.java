@@ -34,7 +34,7 @@ public class Categories implements Locator_Interface {
 	public Object[][] FormsData() throws Exception {
 
 		return com.ebay.Generic.Functions.ExcelDataProvider
-				.dataProvider(System.getProperty("user.dir") + "/TestData/ebayTestcases_Catg.xlsx", "Sheet1", "Y");
+				.dataProvider(System.getProperty("user.dir") + "/TestData/ebayTestcases.xlsx", "Categories", "Y");
 
 	}
 
@@ -44,7 +44,7 @@ public class Categories implements Locator_Interface {
 	@BeforeMethod
 	public void Setup(String platformName, String platformVersion, String deviceName, String deviceOrientation,
 			String automationName, int delay, String unicodeKeyboard, String resetKeyboard)
-			throws MalformedURLException, InterruptedException {
+			throws Exception {
 
 		driver = integratoObj.mobileDriver(platformName, platformVersion, deviceName, deviceOrientation, automationName,
 				delay, unicodeKeyboard, resetKeyboard);

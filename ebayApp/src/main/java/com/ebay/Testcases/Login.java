@@ -33,7 +33,7 @@ public class Login implements Locator_Interface {
 	public Object[][] FormsData() throws Exception {
 
 		return com.ebay.Generic.Functions.ExcelDataProvider.dataProvider(
-				System.getProperty("user.dir") + "/TestData/ebayTestcases_Login.xlsx", "Sheet1", "Y");
+				System.getProperty("user.dir") + "/TestData/ebayTestcases.xlsx", "Login", "Y");
 
 	}
 
@@ -43,7 +43,7 @@ public class Login implements Locator_Interface {
 	@BeforeMethod
 	public void Setup(String platformName, String platformVersion, String deviceName, String deviceOrientation,
 			String automationName, int delay, String unicodeKeyboard, String resetKeyboard)
-			throws MalformedURLException, InterruptedException {
+			throws Exception {
 
 		driver = integratoObj.mobileDriver(platformName, platformVersion, deviceName, deviceOrientation, automationName,
 				delay, unicodeKeyboard, resetKeyboard);
