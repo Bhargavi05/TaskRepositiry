@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="3" passed="3">
+  <reporter-output>
+    <line>
+      <![CDATA[ object is displayed]]>
+    </line>
+    <line>
+      <![CDATA[ object is displayed]]>
+    </line>
+    <line>
+      <![CDATA[Button  was clicked]]>
+    </line>
+    <line>
+      <![CDATA[SIGN IN object is displayed]]>
+    </line>
+    <line>
+      <![CDATA[Button SIGN IN was clicked]]>
+    </line>
+    <line>
+      <![CDATA[bhargavi.ravi0509@gmail.com was input into UI]]>
+    </line>
+    <line>
+      <![CDATA[Entered UN]]>
+    </line>
+    <line>
+      <![CDATA[Test%123 was input into UI]]>
+    </line>
+    <line>
+      <![CDATA[Entered Pwd]]>
+    </line>
+    <line>
+      <![CDATA[Button SIGN IN was clicked]]>
+    </line>
+    <line>
+      <![CDATA[Button MAYBE LATER was clicked]]>
+    </line>
+    <line>
+      <![CDATA[ object is displayed]]>
+    </line>
+    <line>
+      <![CDATA[Signned In successfully]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\bhargavi\Documents\GitHub\TaskRepo\TaskRepositiry\ebayApp/TestsScreenshots/SS20180913022028.png'height=500' width='500'/><br>]]>
+    </line>
+    <line>
+      <![CDATA[ object is displayed]]>
+    </line>
+    <line>
+      <![CDATA[Button CATEGORIES was clicked]]>
+    </line>
+    <line>
+      <![CDATA[Everything Else object is displayed]]>
+    </line>
+    <line>
+      <![CDATA[Test case to verify CategoriesPassed]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\bhargavi\Documents\GitHub\TaskRepo\TaskRepositiry\ebayApp/TestsScreenshots/SS20180913022221.png'height=500' width='500'/><br>]]>
+    </line>
+    <line>
+      <![CDATA[ object is displayed]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on searchBok]]>
+    </line>
+    <line>
+      <![CDATA[Cleared searchBok]]>
+    </line>
+    <line>
+      <![CDATA[Phone was input into UI]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on Mobile Phones]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\bhargavi\Documents\GitHub\TaskRepo\TaskRepositiry\ebayApp/TestsScreenshots/SS20180913022335.png'height=500' width='500'/><br>]]>
+    </line>
+    <line>
+      <![CDATA[No results found for “phone” object is displayed]]>
+    </line>
+    <line>
+      <![CDATA[Test case to verify SearchPassed]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='C:\Users\bhargavi\Documents\GitHub\TaskRepo\TaskRepositiry\ebayApp/TestsScreenshots/SS20180913022342.png'height=500' width='500'/><br>]]>
+    </line>
+  </reporter-output>
+  <suite name="ebay App Suite" duration-ms="301807" started-at="2018-09-12T20:48:51Z" finished-at="2018-09-12T20:53:53Z">
+    <groups>
+    </groups>
+    <test name="ebay App Validation on Android Emulator 7.0" duration-ms="301807" started-at="2018-09-12T20:48:51Z" finished-at="2018-09-12T20:53:53Z">
+      <class name="com.ebay.Testcases.Search">
+        <test-method status="PASS" signature="Setup(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, int, java.lang.String, java.lang.String)[pri:0, instance:com.ebay.Testcases.Search@4cf777e8]" name="Setup" is-config="true" duration-ms="50971" started-at="2018-09-13T02:22:32Z" finished-at="2018-09-13T02:23:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Android]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[7.0]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ZY3222CHPK]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[portrait]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Appium]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[1000]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method status="PASS" signature="search(java.util.Hashtable)[pri:0, instance:com.ebay.Testcases.Search@4cf777e8]" name="search" duration-ms="21978" started-at="2018-09-13T02:23:23Z" data-provider="FormsData" finished-at="2018-09-13T02:23:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{TestCase=Test case to verify Search, InputValue=Phone, execute=Y, VerificationKey=Search}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[ object is displayed]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on searchBok]]>
+            </line>
+            <line>
+              <![CDATA[Cleared searchBok]]>
+            </line>
+            <line>
+              <![CDATA[Phone was input into UI]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on Mobile Phones]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\bhargavi\Documents\GitHub\TaskRepo\TaskRepositiry\ebayApp/TestsScreenshots/SS20180913022335.png'height=500' width='500'/><br>]]>
+            </line>
+            <line>
+              <![CDATA[No results found for “phone” object is displayed]]>
+            </line>
+            <line>
+              <![CDATA[Test case to verify SearchPassed]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\bhargavi\Documents\GitHub\TaskRepo\TaskRepositiry\ebayApp/TestsScreenshots/SS20180913022342.png'height=500' width='500'/><br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- search -->
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.ebay.Testcases.Search@4cf777e8]" name="TearDown" is-config="true" duration-ms="7454" started-at="2018-09-13T02:23:45Z" finished-at="2018-09-13T02:23:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+      </class> <!-- com.ebay.Testcases.Search -->
+      <class name="com.ebay.Testcases.Login">
+        <test-method status="PASS" signature="Setup(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, int, java.lang.String, java.lang.String)[pri:0, instance:com.ebay.Testcases.Login@27c20538]" name="Setup" is-config="true" duration-ms="59022" started-at="2018-09-13T02:18:52Z" finished-at="2018-09-13T02:19:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Android]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[7.0]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ZY3222CHPK]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[portrait]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Appium]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[1000]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method status="PASS" signature="SignInVerification(java.util.Hashtable)[pri:0, instance:com.ebay.Testcases.Login@27c20538]" name="SignInVerification" duration-ms="39523" started-at="2018-09-13T02:19:51Z" data-provider="FormsData" finished-at="2018-09-13T02:20:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{TestCase=Test case to verify Sign In, Password=Test%123, execute=Y, UserName=bhargavi.ravi0509@gmail.com, VerificationKey=SignIn}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[ object is displayed]]>
+            </line>
+            <line>
+              <![CDATA[ object is displayed]]>
+            </line>
+            <line>
+              <![CDATA[Button  was clicked]]>
+            </line>
+            <line>
+              <![CDATA[SIGN IN object is displayed]]>
+            </line>
+            <line>
+              <![CDATA[Button SIGN IN was clicked]]>
+            </line>
+            <line>
+              <![CDATA[bhargavi.ravi0509@gmail.com was input into UI]]>
+            </line>
+            <line>
+              <![CDATA[Entered UN]]>
+            </line>
+            <line>
+              <![CDATA[Test%123 was input into UI]]>
+            </line>
+            <line>
+              <![CDATA[Entered Pwd]]>
+            </line>
+            <line>
+              <![CDATA[Button SIGN IN was clicked]]>
+            </line>
+            <line>
+              <![CDATA[Button MAYBE LATER was clicked]]>
+            </line>
+            <line>
+              <![CDATA[ object is displayed]]>
+            </line>
+            <line>
+              <![CDATA[Signned In successfully]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\bhargavi\Documents\GitHub\TaskRepo\TaskRepositiry\ebayApp/TestsScreenshots/SS20180913022028.png'height=500' width='500'/><br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- SignInVerification -->
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.ebay.Testcases.Login@27c20538]" name="TearDown" is-config="true" duration-ms="7252" started-at="2018-09-13T02:20:30Z" finished-at="2018-09-13T02:20:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+      </class> <!-- com.ebay.Testcases.Login -->
+      <class name="com.ebay.Testcases.Categories">
+        <test-method status="PASS" signature="Setup(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, int, java.lang.String, java.lang.String)[pri:0, instance:com.ebay.Testcases.Categories@56ac3a89]" name="Setup" is-config="true" duration-ms="50065" started-at="2018-09-13T02:20:37Z" finished-at="2018-09-13T02:21:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Android]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[7.0]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ZY3222CHPK]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[portrait]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Appium]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[1000]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method status="PASS" signature="verifyCategories(java.util.Hashtable)[pri:0, instance:com.ebay.Testcases.Categories@56ac3a89]" name="verifyCategories" duration-ms="57267" started-at="2018-09-13T02:21:27Z" data-provider="FormsData" finished-at="2018-09-13T02:22:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{TestCase=Test case to verify Categories, execute=Y, VerificationKey=Categories}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[ object is displayed]]>
+            </line>
+            <line>
+              <![CDATA[Button CATEGORIES was clicked]]>
+            </line>
+            <line>
+              <![CDATA[Everything Else object is displayed]]>
+            </line>
+            <line>
+              <![CDATA[Test case to verify CategoriesPassed]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='C:\Users\bhargavi\Documents\GitHub\TaskRepo\TaskRepositiry\ebayApp/TestsScreenshots/SS20180913022221.png'height=500' width='500'/><br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyCategories -->
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.ebay.Testcases.Categories@56ac3a89]" name="TearDown" is-config="true" duration-ms="7477" started-at="2018-09-13T02:22:25Z" finished-at="2018-09-13T02:22:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+      </class> <!-- com.ebay.Testcases.Categories -->
+    </test> <!-- ebay App Validation on Android Emulator 7.0 -->
+  </suite> <!-- ebay App Suite -->
+</testng-results>
