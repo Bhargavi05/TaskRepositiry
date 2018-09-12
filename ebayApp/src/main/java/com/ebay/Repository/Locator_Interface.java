@@ -18,6 +18,7 @@ public interface Locator_Interface {
 	String maybe_button = "//*[contains(@text,'MAYBE')]";
 
 	// Categories page
+	String baby_Mom_Catg="//*[contains(@text,'Baby')]";
 	String last_Catg = "//*[@text='Everything Else']";
 
 }

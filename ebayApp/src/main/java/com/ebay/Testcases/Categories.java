@@ -7,6 +7,9 @@ import org.testng.annotations.Test;
 import java.net.MalformedURLException;
 import java.util.Hashtable;
 import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -43,8 +46,7 @@ public class Categories implements Locator_Interface {
 
 	@BeforeMethod
 	public void Setup(String platformName, String platformVersion, String deviceName, String deviceOrientation,
-			String automationName, int delay, String unicodeKeyboard, String resetKeyboard)
-			throws Exception {
+			String automationName, int delay, String unicodeKeyboard, String resetKeyboard) throws Exception {
 
 		driver = integratoObj.mobileDriver(platformName, platformVersion, deviceName, deviceOrientation, automationName,
 				delay, unicodeKeyboard, resetKeyboard);
@@ -82,7 +84,7 @@ public class Categories implements Locator_Interface {
 				if (GenericMethods.isObjectDisplayed(last_Catg)) {
 					Reporter.log(TestcaseName + "Passed", true);
 					GenericMethods.toCaptureScreenShot();
-					
+
 				}
 			}
 		} catch (Exception e) {

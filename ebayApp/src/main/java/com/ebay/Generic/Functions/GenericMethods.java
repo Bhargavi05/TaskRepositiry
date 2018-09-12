@@ -18,6 +18,7 @@ import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.ArrayUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
@@ -186,13 +187,18 @@ public class GenericMethods extends Page implements Locator_Interface {
 	 * Date: Sep 4th Purpose: Method to scroll to the bottom of the screen
 	 */
 	public static void scrollToBottomOfScreen() throws InterruptedException {
+
+		Dimension elementdimension = driver.findElement(By.xpath(baby_Mom_Catg)).getSize();
+		int startx = elementdimension.getWidth() * 1;
+		int starty = (int) (elementdimension.getHeight() * 10);
+		int endy = (int) (elementdimension.getHeight() * 5);
 		for (int i = 0; i < 10; i++) {
+			System.out.println(i);
 			Thread.sleep(1000);
 			TouchAction action = new TouchAction((MobileDriver) driver);
-			action.press(550, 1400).waitAction(3000).moveTo(550, 455).release().perform();
+			action.press(startx, starty).waitAction(1000).moveTo(startx, endy).release().perform();
 			Thread.sleep(3000);
 		}
-
 	}
 
 	/*
@@ -229,18 +235,6 @@ public class GenericMethods extends Page implements Locator_Interface {
 	 * Date: Sep 6th Purpose: Method to capture required screenshot
 	 */
 
-	// public static String toCaptureScreenShot() throws IOException {
-	// File source=((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-	// String filename=UUID.randomUUID().toString();
-	// String destination=System.getProperty("./ScreenShots"+filename +".png");
-	// System.out.println("destination="+);
-	// File finalDestination = new File(destination);
-	// FileUtils.copyFile(source,finalDestination);
-	// Reporter.log("<br><img src='"+finalDestination+"'height=500'
-	// width='500'/><br>");
-	// return destination;
-	// }
-
 	// Creating a method getScreenshot and passing two parameters
 	public static String toCaptureScreenShot() throws Exception {
 		// below line is just to append the date format with the screenshot name
@@ -254,13 +248,10 @@ public class GenericMethods extends Page implements Locator_Interface {
 		File finalDestination = new File(destination);
 		FileUtils.copyFile(source, finalDestination);
 		// Returns the captured file path
-		
-		//Adding screenshot to report
+
+		// Adding screenshot to report
 		String filePath = destination;
-		//String path = "<img src="\"file://"" alt="\"\"/" />";
-		//Reporter.log(path);
-		
-		Reporter.log("<br><img src='"+filePath+"'height=500' width='500'/><br>");
+		Reporter.log("<br><img src='" + filePath + "'height=500' width='500'/><br>");
 		return destination;
 	}
 
