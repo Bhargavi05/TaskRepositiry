@@ -7,7 +7,9 @@ import static com.codeborne.selenide.Selenide.$;
 import java.io.File;
 import java.io.IOException;
 import java.text.Collator;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 import java.util.UUID;
@@ -53,7 +55,7 @@ public class GenericMethods extends Page implements Locator_Interface {
 	 * Method Name: isObjectDisplayed Script Developer: Bhargavi Creation Date:
 	 * Sep 4th Purpose: Method to Check object is displayed on UI
 	 */
-	public static boolean isObjectDisplayed(String xpathofObject) throws IOException {
+	public static boolean isObjectDisplayed(String xpathofObject) throws Exception {
 		String actualString = null;
 		boolean matchFlag = true;
 		try {
@@ -81,7 +83,7 @@ public class GenericMethods extends Page implements Locator_Interface {
 	 * 4th Purpose: Method to click on any button on screen
 	 */
 
-	public static void clickOnButton(String locatorName) throws IOException {
+	public static void clickOnButton(String locatorName) throws Exception {
 		String actualString = null;
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, 120);
@@ -99,7 +101,7 @@ public class GenericMethods extends Page implements Locator_Interface {
 	 * 4th Purpose: Method to log failures from functions
 	 */
 
-	public static void failTestCase(String failMessage) throws IOException {
+	public static void failTestCase(String failMessage) throws Exception {
 
 		Reporter.log(failMessage, true);
 		GenericMethods.toCaptureScreenShot();
@@ -110,7 +112,7 @@ public class GenericMethods extends Page implements Locator_Interface {
 	 * Method Name: SignIn Script Developer: Bhargavi Creation Date: Sep 4th
 	 * Purpose: Method to click on any button on screen
 	 */
-	public static void signIn(String userName, String pwd) throws IOException {
+	public static void signIn(String userName, String pwd) throws Exception {
 		String actualString = null;
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, 120);
@@ -146,7 +148,7 @@ public class GenericMethods extends Page implements Locator_Interface {
 	 * Method Name: inputTextInField Script Developer: Bhargavi Creation Date:
 	 * Purpose: Input unformatted text into
 	 */
-	public static void inputTextInField(String locatorName, String InputText) throws IOException {
+	public static void inputTextInField(String locatorName, String InputText) throws Exception {
 		WebElement findField = driver.findElement(By.xpath(locatorName));
 		try {
 			// If field is located, click the field then clear it then enter the
@@ -172,7 +174,7 @@ public class GenericMethods extends Page implements Locator_Interface {
 			driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
 			// To verify app logo
 			GenericMethods.isObjectDisplayed(logo);
-//			GenericMethods.toCaptureScreenShot();
+			// GenericMethods.toCaptureScreenShot();
 		} catch (Exception ex) {
 			GenericMethods.failTestCase("Tc fails as app not Launched");
 		}
@@ -227,15 +229,39 @@ public class GenericMethods extends Page implements Locator_Interface {
 	 * Date: Sep 6th Purpose: Method to capture required screenshot
 	 */
 
-	public static void toCaptureScreenShot() throws IOException {
-		    File srcFile=((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		    String filename=UUID.randomUUID().toString(); 
-		    File targetFile=new File(System.getProperty("user.dir")+"/ScreenShots"+filename +".png");
-		    FileUtils.copyFile(srcFile,targetFile);
-		    Reporter.log("<br><img src='"+targetFile+"'height=500' width='500'/><br>");
-		}
+	// public static String toCaptureScreenShot() throws IOException {
+	// File source=((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+	// String filename=UUID.randomUUID().toString();
+	// String destination=System.getProperty("./ScreenShots"+filename +".png");
+	// System.out.println("destination="+);
+	// File finalDestination = new File(destination);
+	// FileUtils.copyFile(source,finalDestination);
+	// Reporter.log("<br><img src='"+finalDestination+"'height=500'
+	// width='500'/><br>");
+	// return destination;
+	// }
+
+	// Creating a method getScreenshot and passing two parameters
+	public static String toCaptureScreenShot() throws Exception {
+		// below line is just to append the date format with the screenshot name
+		// to avoid duplicate names
+		String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		File source = ts.getScreenshotAs(OutputType.FILE);
+		// after execution, you could see a folder "TestsScreenshots" under src
+		// folder
+		String destination = System.getProperty("user.dir") + "/TestsScreenshots/" + "SS" + dateName + ".png";
+		File finalDestination = new File(destination);
+		FileUtils.copyFile(source, finalDestination);
+		// Returns the captured file path
 		
+		//Adding screenshot to report
+		String filePath = destination;
+		//String path = "<img src="\"file://"" alt="\"\"/" />";
+		//Reporter.log(path);
 		
-		
+		Reporter.log("<br><img src='"+filePath+"'height=500' width='500'/><br>");
+		return destination;
+	}
 
 }
