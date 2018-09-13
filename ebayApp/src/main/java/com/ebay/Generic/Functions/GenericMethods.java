@@ -236,7 +236,7 @@ public class GenericMethods extends Page implements Locator_Interface {
 	 */
 
 	// Creating a method getScreenshot and passing two parameters
-	public static String toCaptureScreenShot() throws Exception {
+	public static String getScreenshot() throws Exception {
 		// below line is just to append the date format with the screenshot name
 		// to avoid duplicate names
 		String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
@@ -244,15 +244,28 @@ public class GenericMethods extends Page implements Locator_Interface {
 		File source = ts.getScreenshotAs(OutputType.FILE);
 		// after execution, you could see a folder "TestsScreenshots" under src
 		// folder
-		String destination = System.getProperty("user.dir") + "/TestsScreenshots/" + "SS" + dateName + ".png";
-		File finalDestination = new File(destination);
-		FileUtils.copyFile(source, finalDestination);
-		// Returns the captured file path
+		String location = System.getProperty("user.dir") + "\\test-output\\screenshot\\" + "SS" + dateName + ".png";
+		// File finalDestination = new File(destination);
+		File screenshotLocation = new File(location);
+		FileUtils.copyFile(source, screenshotLocation);
+		return location;
+	}
 
-		// Adding screenshot to report
-		String filePath = destination;
-		Reporter.log("<br><img src='" + filePath + "'height=500' width='500'/><br>");
-		return destination;
+	public static void toCaptureScreenShot() {
+//		Object currentClass = arg0.getInstance();
+		// WebDriver driver = ((BrowserSetup) currentClass).getDriver();
+		// String name = arg0.getName();
+		// System.out.println(name);
+		try {
+			String screenshotPath = getScreenshot();
+			System.out.println("Screenshot taken");
+			String path = "<img src=\"file://" + screenshotPath + "\" alt=\"\"/>";
+			System.out.println(screenshotPath + " and path - " + path);
+			Reporter.log("Capcher screenshot path is " + path);
+		} catch (Exception e) {
+			System.out.println("Exception while takescreenshot " + e.getMessage());
+		}
+
 	}
 
 }
