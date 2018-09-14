@@ -3,7 +3,6 @@ package com.ebay.Testcases;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
-import java.net.MalformedURLException;
 import java.util.Hashtable;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
@@ -13,14 +12,15 @@ import org.testng.annotations.Parameters;
 import org.testng.asserts.SoftAssert;
 
 import com.codeborne.selenide.WebDriverRunner;
-import com.ebay.Repository.Locator_Interface;
+import com.ebay.Repository.Locator_HomePage;
+import com.ebay.Repository.Locator_SignInPage;
 import com.ebay.Generic.Functions.GenericMethods;
 import com.ebay.Generic.Functions.SetupFile;
 
 //Class description: 
 //*****This class contains  all testcases related to Login feature *****\\
 
-public class Login implements Locator_Interface {
+public class Login implements Locator_SignInPage,Locator_HomePage {
 
 	WebDriver driver;
 	String platform;

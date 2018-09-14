@@ -2,21 +2,14 @@ package com.ebay.Generic.Functions;
 
 import org.openqa.selenium.WebDriver;
 
-import static com.codeborne.selenide.Selenide.$;
-
 import java.io.File;
-import java.io.IOException;
 import java.text.Collator;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 import java.util.Locale;
-import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.lang.ArrayUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
@@ -28,21 +21,19 @@ import org.testng.*;
 import org.testng.Reporter;
 
 import com.ebay.Generic.Functions.GenericMethods;
-import com.ebay.Repository.Locator_Interface;
-import com.ebay.Repository.Page;
-import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
 
+import com.ebay.Repository.Page;
+import com.ebay.Repository.Locator_HomePage;
+import com.ebay.Repository.Locator_SignInPage;
+import com.ebay.Repository.Locator_CategoriesPage;
 import io.appium.java_client.MobileDriver;
-import io.appium.java_client.PerformsTouchActions;
 import io.appium.java_client.TouchAction;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidElement;
+
 
 //Class description: 
 //*****This class contains generic methods means commons methods for all feature *****\\
 
-public class GenericMethods extends Page implements Locator_Interface {
+public class GenericMethods extends Page implements Locator_SignInPage,Locator_CategoriesPage,Locator_HomePage {
 
 	// WebDriver driver;
 	static Collator coll = Collator.getInstance(Locale.US);
